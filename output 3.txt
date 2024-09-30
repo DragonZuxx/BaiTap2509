@@ -1,0 +1,58 @@
+Top 10 từ xuất hiện nhiều nhất:
+the: 309628
+and: 188359
+of: 174275
+to: 161811
+a: 121750
+in: 99712
+i: 99158
+that: 81125
+it: 69996
+he: 68605
+
+Top 10 từ xuất hiện ít nhất:
+joyce
+this: 1
+ulysses
+
+author:: 1
+joyce
+
+release: 1
+#4300]: 1
+widger
+
+
+
+
+
+
+
+ulysses
+
+
+by: 1
+joyce
+
+
+
+
+
+contents: 1
+[
+15: 1
+]
+
+
+
+
+
+
+
+
+
+—: 1
+]
+
+stately: 1
+stairhead: 1

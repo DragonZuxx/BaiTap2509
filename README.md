@@ -83,7 +83,5 @@ URL được coi là hợp lệ nếu thỏa mãn các điều kiện sau:
    - Lưu mã vào một tệp Python và chạy chương trình.
    - Nhập các URL khác nhau để kiểm tra tính hợp lệ và nhận phản hồi.
 
-### Kết quả
-Chương trình hoạt động hiệu quả, cung cấp phản hồi ngay lập tức về tính hợp lệ của các URL được nhập. Qua đó, người dùng có thể dễ dàng kiểm tra các URL theo tiêu chí đã định.
 
 

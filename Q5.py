@@ -12,6 +12,12 @@ def print_maze(maze):
         print(' '.join(map(str, row)))  # Chuyển từng hàng thành chuỗi và in ra
     print()
 
+def write_maze_to_file(maze, file_path):
+    """Ghi mê cung vào file."""
+    with open(file_path, 'w') as file:
+        for row in maze:
+            file.write(' '.join(map(str, row)) + '\n')  # Ghi từng hàng vào file, mỗi hàng trên 1 dòng
+
 def is_valid_move(maze, x, y):
     """Kiểm tra xem có thể di chuyển đến (x, y) không."""
     return (0 <= x < len(maze) and  # Kiểm tra xem x có nằm trong giới hạn của hàng không
@@ -80,6 +86,7 @@ if __name__ == "__main__":
 
     if solve(maze):  # Gọi hàm solve để tìm đường đi
         print("Mê cung sau khi tìm đường đi:")
-        print_maze(maze)  # In mê cung sau khi đã tìm được đường đi
+        write_maze_to_file(maze, 'output 5.txt')  # Ghi mê cung sau khi tìm đường vào file
+        print("Đã ghi kết quả vào file output 5.txt.")
     else:
         print("Không tìm thấy đường đi.")  # Thông báo nếu không tìm thấy đường đi

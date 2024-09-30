@@ -1,9 +1,8 @@
 ** Câu 1 : Sử dụng Set trong collection để tìm tập giao và tập hợp giữa 2 tập hợp (tự tạo ra 2 tập hợp, mỗi tập hợp 2.000.000 một số Integer ngẫu nhiên, không giống nhau. 2 tập hợp phải có trên 5% số phần tử giao nhau).Hãy tính tổng thời gian thực hiện tìm cả tập giao và tập hợp và tìm cách tối ưu nhất để thời gian tính toán này nhỏ nhất có thể. **
 
 
-
-
 ** Câu 2 : Cho một văn bản như trong file “input 2.zip”. Hãy đọc file và đếm số lần xuất hiện của từng từ (Sử dụng stringtokenizer để tách từ, Các từ này được tách với nhau bằng các dấu sau “ .,!=+-”) rồi ghi vào file output.txt. **
+
 
 ** Câu 3 : Lập trình đếm từ đa luồng cho bài 2 với dữ liệu vào là một folder chứa nhiều file text được nén trong file “input 3.zip” bằng cách sử dụng luồng. Hãy xử lý song song các file và tìm top 10 từ xuất hiện nhiều nhất, và top 10 từ xuất hiện ít nhất của toàn bộ dữ liệu có trong folder. Lưu ý, chỉ được chạy tối đa 6 luồng cùng lúc. **
 
@@ -82,6 +81,9 @@ URL được coi là hợp lệ nếu thỏa mãn các điều kiện sau:
 4. **Chạy chương trình**:
    - Lưu mã vào một tệp Python và chạy chương trình.
    - Nhập các URL khác nhau để kiểm tra tính hợp lệ và nhận phản hồi.
+  
+     ![image](https://github.com/user-attachments/assets/53c4e043-1b05-4b22-9231-bccdc74a303d)
+
 
 
 

@@ -18,9 +18,9 @@ Cách làm của đề bài
    - Sau khi hoàn tất tính toán, chương trình in ra số phần tử trong tập giao và tập hợp, cũng như tổng thời gian tính toán cho cả quá trình.
 
 Kết quả:
-Số phần tử giao nhau: 480750
-Số phần tử hợp: 3599295
-Thời gian tính toán: 0.27490782737731934 giây
+- Số phần tử giao nhau: 480750
+- Số phần tử hợp: 3599295
+- Thời gian tính toán: 0.27490782737731934 giây
 ![image](https://github.com/user-attachments/assets/2c0ae5e6-96c8-43aa-b5e0-2c48ce5f0e13)
 
 

@@ -20,6 +20,7 @@ Nhân viên nhập hàng (mã nv, giới tính, ngày làm việc, thâm niên)
 Mặt hàng (mã hàng hóa, tên hàng hóa, phân loại, giá) 
 Hóa đơn (mã hóa đơn, mã nv bán hàng, mã KH nếu có, danh sách mặt hàng, tổng giá, ngày mua) **
 Báo cáo về đoạn code của hệ thống hóa đơn theo hướng đối tượng:
+
 ---
 1. **Khách hàng (`KhachHang`)**:
 - **Thuộc tính:**

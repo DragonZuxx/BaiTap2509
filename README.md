@@ -19,6 +19,55 @@ Nhân viên bán hàng (mã nv, giới tính, ngày làm việc, ca đăng ký)
 Nhân viên nhập hàng (mã nv, giới tính, ngày làm việc, thâm niên) 
 Mặt hàng (mã hàng hóa, tên hàng hóa, phân loại, giá) 
 Hóa đơn (mã hóa đơn, mã nv bán hàng, mã KH nếu có, danh sách mặt hàng, tổng giá, ngày mua) **
+Báo cáo về đoạn code của hệ thống hóa đơn theo hướng đối tượng:
+
+1. **Khách hàng (`KhachHang`)**:
+- **Thuộc tính:**
+  - `customer_id`: Mã khách hàng, giúp định danh duy nhất từng khách hàng.
+  - `gender`: Giới tính của khách hàng.
+  - `age`: Độ tuổi của khách hàng.
+- **Chức năng**: 
+  - Mô tả thông tin cơ bản về khách hàng như mã, giới tính và độ tuổi. Lớp này có thể mở rộng để lưu trữ thêm thông tin như địa chỉ hoặc phương thức thanh toán.
+
+2. **Nhân viên bán hàng (`Salesperson`)**:
+- **Thuộc tính:**
+  - `employee_id`: Mã nhân viên, giúp định danh duy nhất mỗi nhân viên bán hàng.
+  - `gender`: Giới tính của nhân viên bán hàng.
+  - `work_date`: Ngày làm việc của nhân viên.
+  - `shift`: Ca làm việc (sáng, chiều hoặc tối) của nhân viên.
+- **Chức năng**: 
+  - Lưu thông tin cơ bản về nhân viên bán hàng để liên kết họ với các hóa đơn bán hàng.
+
+3. **Nhân viên nhập hàng (`Stocker`)**:
+- **Thuộc tính:**
+  - `employee_id`: Mã nhân viên, giúp định danh nhân viên nhập hàng.
+  - `gender`: Giới tính của nhân viên nhập hàng.
+  - `work_date`: Ngày làm việc của nhân viên nhập hàng.
+  - `experience`: Thâm niên làm việc của nhân viên nhập hàng, có thể dùng để xác định mức lương hoặc các lợi ích khác.
+- **Chức năng**: 
+  - Lưu thông tin về nhân viên nhập hàng, giúp quản lý lịch làm việc và mức độ kinh nghiệm.
+
+4. **Mặt hàng (`Product`)**:
+- **Thuộc tính:**
+  - `product_id`: Mã sản phẩm, giúp định danh duy nhất mỗi mặt hàng.
+  - `product_name`: Tên của mặt hàng.
+  - `category`: Phân loại mặt hàng (ví dụ: thực phẩm, đồ uống, gia dụng, v.v.).
+  - `price`: Giá của mặt hàng.
+- **Chức năng**: 
+  - Lớp này cung cấp thông tin chi tiết về từng mặt hàng bán trong cửa hàng tạp hóa. Nó có thể được sử dụng để tính toán tổng giá trị của hóa đơn.
+
+5. **Hóa đơn (`Invoice`)**:
+- **Thuộc tính:**
+  - `invoice_id`: Mã hóa đơn, định danh duy nhất mỗi hóa đơn.
+  - `salesperson_id`: Mã nhân viên bán hàng thực hiện giao dịch.
+  - `customer_id`: Mã khách hàng nếu có, có thể để trống nếu khách hàng không đăng ký tài khoản.
+  - `product_list`: Danh sách các mặt hàng mà khách hàng đã mua.
+  - `total_price`: Tổng số tiền của hóa đơn, tính bằng cách cộng tổng giá các mặt hàng.
+  - `purchase_date`: Ngày mua hàng.
+- **Chức năng**: 
+  - Quản lý toàn bộ thông tin liên quan đến giao dịch, bao gồm nhân viên bán hàng, khách hàng, mặt hàng mua và tổng giá.
+
+![image](https://github.com/user-attachments/assets/b4086ca5-9cf6-48d7-a272-e33e6a79a4a7)
 
 
 ** Câu 7 : Một url là url thỏa mãn các yếu tố (ví dụ 1 url hợp lệ: https://tiki.vn/dien-thoai-may-tinhbang/c1789?src=mega-menu): 
@@ -81,7 +130,10 @@ URL được coi là hợp lệ nếu thỏa mãn các điều kiện sau:
 4. **Chạy chương trình**:
    - Lưu mã vào một tệp Python và chạy chương trình.
    - Nhập các URL khác nhau để kiểm tra tính hợp lệ và nhận phản hồi.
-  
+Đoạn code:
+      ![image](https://github.com/user-attachments/assets/e658e3c7-de96-4597-be79-57c5f472ea76)
+
+Kết Quả:
      ![image](https://github.com/user-attachments/assets/53c4e043-1b05-4b22-9231-bccdc74a303d)
 
 

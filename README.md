@@ -25,5 +25,65 @@ Hóa đơn (mã hóa đơn, mã nv bán hàng, mã KH nếu có, danh sách mặ
 ** Câu 7 : Một url là url thỏa mãn các yếu tố (ví dụ 1 url hợp lệ: https://tiki.vn/dien-thoai-may-tinhbang/c1789?src=mega-menu): 
 - Bắt đầu bằng http hoặc https 
 - Có thể chứa www hoặc không  **
+Dưới đây là mẫu báo cáo chi tiết về cách làm bài kiểm tra tính hợp lệ của URL, bao gồm các bước thực hiện:
+
+---
+
+### Mục tiêu
+Mục tiêu của chương trình là:
+- Xác định xem một URL có hợp lệ hay không dựa trên các tiêu chí đã cho.
+- Cung cấp giao diện cho người dùng để nhập URL và nhận phản hồi về tính hợp lệ.
+
+### Tiêu chí kiểm tra URL
+URL được coi là hợp lệ nếu thỏa mãn các điều kiện sau:
+1. Bắt đầu bằng `http://` hoặc `https://`.
+2. Có thể chứa `www.` hoặc không.
+3. Địa chỉ miền phải có tên miền là chuỗi ký tự (bao gồm chữ cái và số) và phần mở rộng từ 2 đến 6 ký tự (ví dụ: `.com`, `.vn`, `.net`).
+4. Có thể có đường dẫn sau tên miền mà không chứa khoảng trắng.
+
+### Các bước thực hiện
+1. **Xây dựng hàm `validate_url`**:
+   - Sử dụng biểu thức chính quy (regex) để kiểm tra định dạng của URL.
+   - Định nghĩa hàm `validate_url(url)` với tham số là URL cần kiểm tra.
+
+   ```python
+   import re
+
+   def validate_url(url):
+       pattern = r'^(http|https)://(www\.)?([a-zA-Z0-9]+)\.[a-z]{2,6}(/[^\s]*)?$'
+       return bool(re.match(pattern, url))
+   ```
+
+2. **Giao diện người dùng**:
+   - Sử dụng vòng lặp `while` để yêu cầu người dùng nhập URL liên tục cho đến khi họ chọn thoát.
+   - Kiểm tra điều kiện thoát khi người dùng nhập "done" hoặc để trống và nhấn "Enter".
+
+   ```
+   while True:
+       url = input("Nhập URL để kiểm tra (hoặc gõ 'done' hoặc bấm 'Enter' để thoát): ")
+
+       # Kiểm tra điều kiện thoát
+       if url.lower() == 'done' or url == '':
+           print("Thoát chương trình.")
+           break
+   ```
+
+3. **Kiểm tra tính hợp lệ**:
+   - Sử dụng hàm `validate_url` để xác thực URL nhập vào.
+   - Cung cấp phản hồi cho người dùng dựa trên kết quả kiểm tra.
+
+   ```
+       if validate_url(url):
+           print("URL hợp lệ.")
+       else:
+           print("URL không hợp lệ. Vui lòng nhập lại.")
+   ```
+
+4. **Chạy chương trình**:
+   - Lưu mã vào một tệp Python và chạy chương trình.
+   - Nhập các URL khác nhau để kiểm tra tính hợp lệ và nhận phản hồi.
+
+### Kết quả
+Chương trình hoạt động hiệu quả, cung cấp phản hồi ngay lập tức về tính hợp lệ của các URL được nhập. Qua đó, người dùng có thể dễ dàng kiểm tra các URL theo tiêu chí đã định.
 
 
